@@ -8,13 +8,14 @@ from PIL import Image
 from io import BytesIO
 import numpy as np
 
-#Se lee del archivo .env la api key de openai
-_ = load_dotenv('api_keys.env')
+#Se lee del archivo .env la api key dce openai
+_ = load_dotenv('api_keys_1.env')
+print(os.environ.get('openai_api_key'))
 client = OpenAI(
     # This is the default and can be omitted
     api_key=os.environ.get('openai_api_key'),
 )
-
+print(os.environ.get('openai_api_key'))
 #Se carga la lista de películas de movie_titles.json
 with open('movie_descriptions.json', 'r') as file:
     file_content = file.read()
